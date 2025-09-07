@@ -13,4 +13,6 @@ const getTime = (req, res) => {
   res.end();
 };
 
-module.exports = { getHello, getTime, getTimeString, hello };
+module.exports = {
+  getHello, getTime, getTimeString, hello,
+};
