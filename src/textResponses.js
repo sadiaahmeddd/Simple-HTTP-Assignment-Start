@@ -1,20 +1,23 @@
-// Step 25: a dynamic function for the current time
+// Step 25 (already): dynamic time
 const getTimeString = () => new Date().toString();
 
-// Step 26: plain-text endpoints
+// Step 26 (already): plain-text endpoints
 const hello = 'Hello World';
 
 const getHello = (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write(hello);
-  res.end();
+  res.end(hello);
 };
 
 const getTime = (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.write(getTimeString());
-  res.end();
+  res.end(getTimeString());
 };
 
-// (export so server.js can use them)
-module.exports = { getHello, getTime, getTimeString, hello };
+// Step 27: export all (functions + values) in one object
+module.exports = {
+  getHello,
+  getTime,
+  getTimeString,
+  hello,
+};
