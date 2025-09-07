@@ -17,7 +17,7 @@ const onRequest = (req, res) => {
   if (req.url === '/timeJSON') return json.getTimeJSON(req, res);
   if (req.url === '/dankmemes') return img.getSpongegar(req, res);
 
-  return html.getIndex(req, res); // default
+  return html.getIndex(req, res);
 };
 
 http.createServer(onRequest).listen(port, () => {

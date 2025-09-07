@@ -1,5 +1,6 @@
 const fs = require('fs');
-const index = fs.readFileSync(`${__dirname}/../client/client.html`);   // adjust name if yours is index.html
+
+const index = fs.readFileSync(`${__dirname}/../client/client.html`);
 const page2 = fs.readFileSync(`${__dirname}/../client/client2.html`);
 
 const getIndex = (req, res) => {
