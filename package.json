@@ -1,12 +1,18 @@
 {
-  "name": "simple-https-assignment",
+  "name": "simple-http-assignment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "pretest": "eslint src --fix",
+    "test": "eslint src"
   },
-  "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb": "^19.0.0",
+    "eslint-plugin-import": "^2.0.0"
+  }
 }
