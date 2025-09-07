@@ -1,5 +1,8 @@
-const hello = 'Hello World';
+// Step 25: a dynamic function for the current time
 const getTimeString = () => new Date().toString();
+
+// Step 26: plain-text endpoints
+const hello = 'Hello World';
 
 const getHello = (req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -13,6 +16,5 @@ const getTime = (req, res) => {
   res.end();
 };
 
-module.exports = {
-  getHello, getTime, getTimeString, hello,
-};
+// (export so server.js can use them)
+module.exports = { getHello, getTime, getTimeString, hello };
